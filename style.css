@@ -38,12 +38,27 @@ main a {
 main > h3,
 .header {
   font-size: 40px;
-  border-radius: 8px;
-  background-color: rgb(255, 255, 255);
+  /* border-radius: 8px; */
+  /* background-color: rgb(255, 255, 255); */
 
   font-weight: 800;
-  color: rgb(1, 11, 28);
-  margin: 0.4rem 0;
+  color: rgb(255, 255, 255);
+  /* margin: 0.4rem 0; */
+}
+
+.pm {
+  font-size: 99px;
+  color: white;
+  /* background: #00000042; */
+  /* height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: none; */
+  position: relative;
+  top: 3rem;
 }
 
 .invited > h3 span,
@@ -204,6 +219,12 @@ ul li {
 }
 
 @media screen and (max-width: 590px) {
+  .responsive {
+    width: 100% !important;
+  }
+  #navbar-sticky ul {
+    background-color: rgba(0, 0, 0, 0.279);
+  }
   .boxes {
     display: grid;
     grid-template-columns: 1fr;
@@ -213,6 +234,9 @@ ul li {
   }
   .max-w {
     width: 90%;
+  }
+  .pm {
+    font-size: 2rem;
   }
 }
 .menus ul {
@@ -229,4 +253,24 @@ ul li {
   .brand-title {
     display: none;
   }
+}
+
+.first {
+  background-image: url('/PM.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* .two {
+  background-image: url('/two.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+
+ul li a {
+  color: white !important;
+}
+ul li a:hover {
+  color: rgb(10, 112, 245) !important;
 }

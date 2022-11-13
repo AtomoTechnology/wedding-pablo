@@ -11,7 +11,7 @@
 
 // all();
 
-document.getElementById('cbu').addEventListener('click', (e) => {
+document.getElementById('cbu')?.addEventListener('click', (e) => {
   navigator.clipboard.writeText(e.target.dataset.cbu);
   document.querySelector('.tooltip').textContent = 'Copiado';
   setTimeout(() => {
@@ -213,33 +213,33 @@ document.getElementById('toggle-menu').addEventListener('click', function (e) {
 });
 const boxes = document.querySelector('.boxes');
 
-lists.map((table) => {
-  const box = document.createElement('div');
-  const ul = document.createElement('ul');
-  const h3 = document.createElement('h3');
+// lists.map((table) => {
+//   const box = document.createElement('div');
+//   const ul = document.createElement('ul');
+//   const h3 = document.createElement('h3');
 
-  h3.textContent = table.tablename + ` (${table.persons.length})`;
+//   h3.textContent = table.tablename + ` (${table.persons.length})`;
 
-  box.classList.add('table-box');
-  box.appendChild(ul);
+//   box.classList.add('table-box');
+//   box.appendChild(ul);
 
-  table.persons.map((p) => {
-    const span = document.createElement('span');
-    span.classList.add('text');
-    span.textContent = p;
-    const li = document.createElement('li');
-    li.innerHTML = `
-        <span class="icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-          </svg>
-        </span>
-    `;
-    li.appendChild(span);
-    ul.appendChild(li);
-  });
-  box.appendChild(h3);
-  box.appendChild(ul);
-  boxes.appendChild(box);
-});
+//   table.persons.map((p) => {
+//     const span = document.createElement('span');
+//     span.classList.add('text');
+//     span.textContent = p;
+//     const li = document.createElement('li');
+//     li.innerHTML = `
+//         <span class="icon">
+//           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+//             stroke="currentColor" class="w-6 h-6">
+//             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+//           </svg>
+//         </span>
+//     `;
+//     li.appendChild(span);
+//     ul.appendChild(li);
+//   });
+//   box.appendChild(h3);
+//   box.appendChild(ul);
+//   boxes.appendChild(box);
+// });
